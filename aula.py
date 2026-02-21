@@ -1,18 +1,74 @@
-# palavra reservada condicao
-# loop finito
-import time 
+# dicionarios
+# listas
+# variaveis 
+# condicionais 
+
+# criar um e-commerce
+
+# cadastro no e-commerce
+dados = {
+        'login':[],
+        'senha':[],
+            'produtos':{
+                        '1':['Computador Dell - R$', 5000.0],
+                        '2':['Fone Apple - R$', 2000.0],
+                        '3':['Mouse Lenovo - R$ ', 250.0],
+                        '4':['Monitor Lenovo - R$ ', 3000.0]
+
+                       }        
+}
+
+print('CADASTRE-SE:')
+cad_login = input('Cadastre seu login: ')
+cad_senha = input('Cadastre a sua senha: ')
+dados['login'].append(cad_login)
+dados['senha'].append(cad_senha)
+
+# acessar o e-commerce
+print('ACESSE A APLICAÇÃO: ')
+
+acesso_login = input('Digite seu login para acessar: ')
+acesso_senha = input('Digite sua senha para acessar: ')
+
+if acesso_login == dados['login'][0] and acesso_senha == dados['senha'][0]:
+    print('SEJA BEM VINDO(A) AO E-COMMERCE Z')
 
 
-# iterando percorrendo 
-# repetições 
+    # verificar a lista de produtos
+    print(" PRODUTOS: ")
 
-
-l =  [1,2,3,4]
-
-
-for i in range(10):
-    produto = input('Digite o id do produto') 
-    if i == 5:
-        break
-
+    produto = input(f'''
     
+        {dados['produtos']} - escolha 1 - 2 - 3 - 4 ->>>
+                 
+                   ''')    
+
+    # comprar um produto
+    carrinho = []
+    valores = []
+    
+    carrinho.append(dados['produtos'][produto][0])
+    valores.append(dados['produtos'][produto][1])
+    print(carrinho[0],valores[0] )
+
+    # paga o produto
+
+    soma = sum(valores)
+    print('Valor a pagar - R$', soma)
+    pag = input('digite a forma de pagamento')
+    print('forma de pagmento', pag)
+    print('Obrigada volte sempre! ')
+
+
+
+else:
+    print('Digitação de senha e login incorreta')
+    print('Faça novamente')    
+
+
+
+
+
+
+
+
