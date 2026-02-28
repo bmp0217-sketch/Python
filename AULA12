@@ -1,0 +1,13 @@
+def comparar_impares(num1, num2):
+    #verificar se os numeros são impares
+    if num1 %2 !=0 and num2 %2!=0:
+        return f'ambos os ( {num1} e {num2}) são impares '
+    elif num1 %2 !=0 and num2 %2==0:
+        return f'apenas o numero {num1} é impar'
+    elif num2 % 2 == 0 and num2 %2!=0:
+        return f'apenas o numero {num2} e impar'
+    else:
+        return f'nenhum dos numeros ({num1} e {num2}) é impar'
+    
+print(comparar_impares(2,10))
+
